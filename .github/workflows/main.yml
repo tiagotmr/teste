@@ -18,7 +18,7 @@ jobs:
         ftp_host: ${{ secrets.ftp_host }}
         ftp_username: ${{ secrets.ftp_username }}
         ftp_password: ${{ secrets.ftp_password }}
-        local_source_dir: teste
+        local_source_dir: "teste"
         dist_target_dir: /public_html/homologacao/
         exclude: ".github** .github*/** .git** "
         delete: "true"
