@@ -1,0 +1,24 @@
+on: 
+  push:
+      branches:
+      - master
+
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2 
+
+    - name: 📂 Sync files
+      uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
+      with:
+        ftp_host: ${{ secrets.ftp_host }}
+        ftp_username: ${{ secrets.ftp_username }}
+        ftp_password: ${{ secrets.ftp_password }}
+        local_source_dir: ../
+        dist_target_dir: /public_html/homologacao/
+        exclude: " '^logs/' '^README.md' "
+        delete: " true "
