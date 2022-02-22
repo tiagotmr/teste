@@ -20,5 +20,5 @@ jobs:
         ftp_password: ${{ secrets.ftp_password }}
         local_source_dir: /
         dist_target_dir: /public_html/homologacao/
-        exclude: " '^logs/' '^README.md' "
+        exclude: .github** .github*/** Workspace* Workspace*/** .vscode* .vscode*/** .gitignore* .gitignore*/**  .gitattributes* .gitattributes*/**
         delete: " true "
