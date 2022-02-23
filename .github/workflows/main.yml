@@ -22,4 +22,4 @@ jobs:
         dist_target_dir: "/public_html/homologacao"
         exclude: ".github** .github*/** .git** "
         delete: "true"
-        other_flags: "--overwrite"
+        other_flags: "--dereference"
