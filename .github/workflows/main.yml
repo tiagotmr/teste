@@ -19,6 +19,7 @@ jobs:
         ftp_username: ${{ secrets.ftp_username }}
         ftp_password: ${{ secrets.ftp_password }}
         local_source_dir: "/github/workspace/"
-        dist_target_dir: "/public_html/homologacao"
+        dist_target_dir: "/public_html/homologacao/"
         exclude: ".github** .github*/** .git** "
-        only_newer: "true"
+        delete: "true"
+        other_flags: "--no-empty-dirs --ascii"
